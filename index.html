@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Beta 3.0 — UI Design Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1830;
+    --teal:#2DD4BF;
+    --teal-dark:#085850;
+    --bg:#F5FAFA;
+    --ink:#0B2545;
+    --ink-65:rgba(11,37,69,.65);
+    --border:rgba(11,37,69,.12);
+    --font-body:'Inter', sans-serif;
+    --font-head:'Plus Jakarta Sans', sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:var(--font-body); background:var(--bg); color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  header{
+    background:var(--navy); color:#fff; padding:64px 24px 56px;
+  }
+  .wrap{ max-width:1080px; margin:0 auto; }
+  .eyebrow{
+    font-family:var(--font-head); font-size:12.5px; font-weight:700; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--teal); margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--font-head); font-size:42px; font-weight:800; margin:0 0 16px; line-height:1.15;
+  }
+  header p{
+    font-size:16px; color:rgba(255,255,255,.72); max-width:620px; line-height:1.6; margin:0;
+  }
+  main{ padding:48px 24px 80px; }
+  .grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
+    max-width:1080px; margin:0 auto;
+  }
+  @media (max-width:900px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){ .grid{ grid-template-columns:1fr; } header{padding:48px 20px 44px;} h1{font-size:30px;} }
+
+  a.card{
+    display:block; text-decoration:none; color:inherit;
+    background:#fff; border:1px solid var(--border); border-radius:14px;
+    padding:22px 20px; transition:transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+    box-shadow:0 2px 8px rgba(11,37,69,.06);
+  }
+  a.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 36px rgba(11,37,69,.14);
+    border-color:rgba(45,212,191,.5);
+  }
+  .num{
+    font-family:var(--font-head); font-size:22px; font-weight:800; color:var(--teal-dark);
+    margin:0 0 10px;
+  }
+  .name{
+    font-family:var(--font-head); font-size:17px; font-weight:700; margin:0 0 8px; color:var(--ink);
+  }
+  .desc{
+    font-size:13px; color:var(--ink-65); line-height:1.5; margin:0;
+  }
+  footer{
+    text-align:center; padding:36px 24px 56px; font-size:12.5px; color:var(--ink-65);
+  }
+  footer a{ color:var(--teal-dark); font-weight:600; text-decoration:none; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">IELTS Beta 3.0</p>
+      <h1>UI Design Prototype</h1>
+      <p>A 9-screen click-through of the product experience — from the marketing landing page through to the admin panel. Every screen shares one design system and links to every other screen.</p>
+    </div>
+  </header>
+  <main>
+    <div class="grid">
+      <a class="card" href="phase1-landing.html">
+        <p class="num">01</p>
+        <p class="name">Landing</p>
+        <p class="desc">Marketing homepage — hero, feature grid, journey steps, testimonials, FAQ.</p>
+      </a>
+      <a class="card" href="phase2-auth.html">
+        <p class="num">02</p>
+        <p class="name">Sign In</p>
+        <p class="desc">Authentication — account creation and login.</p>
+      </a>
+      <a class="card" href="phase3-dashboard.html">
+        <p class="num">03</p>
+        <p class="name">Dashboard</p>
+        <p class="desc">Home base — streaks, skill progress, today's mission, AI tutor.</p>
+      </a>
+      <a class="card" href="phase4-learning.html">
+        <p class="num">04</p>
+        <p class="name">Learning</p>
+        <p class="desc">Skill modules and structured lessons.</p>
+      </a>
+      <a class="card" href="phase5-practice.html">
+        <p class="num">05</p>
+        <p class="name">Practice</p>
+        <p class="desc">Mock tests and single-skill practice, with automatic band scoring.</p>
+      </a>
+      <a class="card" href="phase6-results.html">
+        <p class="num">06</p>
+        <p class="name">Results</p>
+        <p class="desc">Band score breakdown and personalised feedback.</p>
+      </a>
+      <a class="card" href="phase7-gamification.html">
+        <p class="num">07</p>
+        <p class="name">Rewards</p>
+        <p class="desc">Streaks, XP, achievements and motivation loops.</p>
+      </a>
+      <a class="card" href="phase8-teacher.html">
+        <p class="num">08</p>
+        <p class="name">Teacher Portal</p>
+        <p class="desc">Class overview and student progress for teachers.</p>
+      </a>
+      <a class="card" href="phase9-admin.html">
+        <p class="num">09</p>
+        <p class="name">Admin Panel</p>
+        <p class="desc">Platform administration and management.</p>
+      </a>
+    </div>
+  </main>
+  <footer>
+    Every screen has a floating &#9776; menu (bottom-right) to jump to any other screen.
+  </footer>
+</body>
+</html>
